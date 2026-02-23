@@ -41,6 +41,7 @@ add: harden runtime reliability and release documentation (20260223)
 
 ### Evidence of Proof
 - **Detailed QA Report:** `20260223-add-empathy-machine-bluesky-letta-bot-discovery-qa.md`
+- **Reviewer Run Sheet:** `20260223-add-empathy-machine-bluesky-letta-bot-discovery-reviewer-run-sheet.md`
 - **Quality Gates:** `npm run typecheck`, `npm test`, CLI runtime smoke checks
 
 ### Reproduction Steps
