@@ -12,6 +12,8 @@ We are collaborating on an art + science project which explores *observation of 
 
 ## "Observation"
 
+*"v0.1" draft - not edited* 😬
+
 You will see conflict, bad faith, no faith, and more.
 
 You will also see kindness and goodwill and silliness (galore).
