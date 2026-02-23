@@ -1,0 +1,11 @@
+{
+  "name": "@empathy-machine/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/server.ts",
+  "types": "src/server.ts",
+  "dependencies": {
+    "@empathy-machine/event-log": "0.1.0"
+  }
+}

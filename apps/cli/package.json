@@ -1,0 +1,13 @@
+{
+  "name": "@empathy-machine/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/main.ts",
+  "types": "src/main.ts",
+  "dependencies": {
+    "@empathy-machine/event-log": "0.1.0",
+    "@empathy-machine/shared-types": "0.1.0",
+    "@empathy-machine/worker": "0.1.0"
+  }
+}

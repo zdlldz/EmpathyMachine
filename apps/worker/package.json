@@ -1,0 +1,16 @@
+{
+  "name": "@empathy-machine/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@empathy-machine/core-agent": "0.1.0",
+    "@empathy-machine/event-log": "0.1.0",
+    "@empathy-machine/network-bluesky": "0.1.0",
+    "@empathy-machine/policy-engine": "0.1.0",
+    "@empathy-machine/sentiment-engine": "0.1.0",
+    "@empathy-machine/shared-types": "0.1.0"
+  }
+}

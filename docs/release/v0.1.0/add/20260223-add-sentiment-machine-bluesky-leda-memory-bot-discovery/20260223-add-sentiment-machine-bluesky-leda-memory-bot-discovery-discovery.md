@@ -1,11 +1,11 @@
 ---
-title: "Discovery: SentimentMachine Bluesky Bot + Letta/Letta Memory Architecture"
+title: "Discovery: SentimentMachine Bluesky Bot + Memory Architecture"
 id: 20260223
 category: add
-slug: 20260223-add-sentiment-machine-bluesky-Letta-memory-bot-discovery
+slug: 20260223-add-sentiment-machine-bluesky-leda-memory-bot-discovery
 status: in-progress
 icon: lucide:search
-tags: discovery, research, sentiment-machine, bluesky, letta, Letta
+tags: discovery, research, sentiment-machine, bluesky, memory-agent
 author: codex
 version: v0.1.0
 date: 2026-02-23
@@ -20,7 +20,7 @@ description: Initial research and architecture fingerprint for building Sentimen
 - **Fingerprint (Candidate Stack):**
   - Runtime and language: Node.js + TypeScript
   - Network SDK: Bluesky AT Protocol via `@atproto/api`
-  - Agent memory runtime: Letta Code SDK (assumed mapping for "Letta" pending confirmation)
+  - Agent memory runtime: memory-agent adapter (SDK provider selected in planning/implementation)
   - Scheduling and orchestration: worker process + queue + cron-style intervals
   - Web frontend: lightweight operations UI for policies, moderation, and telemetry
   - Shared contracts: central typed event/message schemas for DRY modules
@@ -45,8 +45,8 @@ description: Initial research and architecture fingerprint for building Sentimen
 ## 3. External Research Snapshot
 - **Bluesky Baseline:** Official docs provide TypeScript-first SDK usage with `@atproto/api`, auth, and posting workflow (`docs.bsky.app`).
 - **Bluesky Bot Pattern:** Official starter templates demonstrate minimal bot loops and schedule-based posting, useful as a thin integration baseline before policy/memory layering.
-- **Memory-Backed Runtime Fit:** Letta public docs describe persistent agents, sessions, and memory blocks that align with the desired architecture.
-- **Naming Ambiguity:** Public research did not return a clear "Letta LLM framework" canonical project; likely intent is Letta, but this must be confirmed before planning.
+- **Memory-Backed Runtime Fit:** Available memory-agent SDKs describe persistent agents, sessions, and memory blocks that align with the desired architecture.
+- **Naming Ambiguity:** Framework naming from voice input may vary; implementation should use an adapter boundary to avoid lock-in while preserving portability.
 
 ## 4. Preliminary Architecture Direction (Recommended)
 - **A. Network Ingestion Layer (Bluesky Adapter):**
@@ -57,7 +57,7 @@ description: Initial research and architecture fingerprint for building Sentimen
   - Compute per-event and rolling-window sentiment with pluggable analyzers.
   - Apply engagement policy (reply thresholds, cooldowns, non-engagement rules).
   - Keep classifier choice swappable to avoid lock-in.
-- **C. Agent Memory Layer (Letta/Letta):**
+- **C. Agent Memory Layer (Provider Adapter):**
   - Maintain persistent memory blocks for context continuity.
   - Use session boundaries to separate per-thread, per-user, and global memory scopes.
   - Run periodic compaction/summarization to reduce drift.
@@ -72,7 +72,7 @@ description: Initial research and architecture fingerprint for building Sentimen
 ## 5. Componentization Strategy (DRY-First)
 - Prefer a monorepo split from day one:
   - `packages/network-bluesky` (ATProto integration)
-  - `packages/core-memory-agent` (Letta/Letta orchestration)
+  - `packages/core-memory-agent` (provider orchestration)
   - `packages/sentiment-engine` (classification + aggregation)
   - `packages/policy-engine` (engagement and safety decisions)
   - `packages/shared-types` (canonical DTOs/events)
@@ -83,7 +83,7 @@ description: Initial research and architecture fingerprint for building Sentimen
 
 ## 6. Findings & Risks
 - **Risk: Framework Identity Drift**
-  - "Letta" is not currently unambiguous in public references; incorrect framework selection can derail implementation.
+  - Framework naming mismatch from speech input can derail implementation unless provider integration is abstracted.
 - **Risk: Sentiment Overreach**
   - Mood analysis can produce false confidence without strict confidence scores and abstain behavior.
 - **Risk: Safety + Moderation**
@@ -94,7 +94,7 @@ description: Initial research and architecture fingerprint for building Sentimen
   - Rate limits, API variability, and worker failures require robust retry/backoff and dead-letter handling.
 
 ## 7. Open Questions (Blocking for Planning Phase)
-- Does "Letta" explicitly mean Letta, or a different memory framework?
+- Which specific memory SDK is the first provider target for V1?
 - Should V1 only observe and score sentiment, or also post/reply autonomously?
 - What is the minimum V1 web scope: telemetry-only, or telemetry + policy editing + approval queue?
 - Which sentiment granularity is required first: post-level, thread-level, account-level, or global rolling network mood?
@@ -103,7 +103,7 @@ description: Initial research and architecture fingerprint for building Sentimen
 
 ## 8. Recommended Next Outputs
 - Produce `planning.md` with two architecture options:
-  - **Option A:** Letta-backed memory agent with modular sentiment engine.
+  - **Option A:** provider-backed memory agent with modular sentiment engine.
   - **Option B:** Minimal deterministic sentiment pipeline first, then memory-agent upgrade.
 - Define a V1 contract document:
   - Ingestion scope

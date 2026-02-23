@@ -95,21 +95,30 @@ description: Initial research and architecture fingerprint for building the Empa
   - Storing raw thread content and memory state requires clear retention and redaction policy.
 
 ## 7. Open Questions (Blocking for Planning Phase)
-- **Engagement Scope:** Should V1 reply only to direct mentions, or also proactively engage in selected public threads?
-- **Human Oversight Mode:** Should V1 run fully autonomous or require review for first N days/weeks?
 - **Memory Scope:** Single global memory, per-user memory, or hybrid memory with strict boundaries?
 - **Safety Depth:** Which categories should always suppress responses (harassment, self-harm, politics, etc.) in V1?
-- **Frontend Scope for V1:** Minimal ops dashboard only, or full prompt/policy editing UI from the start?
-- **Deployment Target:** Local-first, containerized VPS, or managed platform from day one?
+- **Proactive Scope:** Which proactive surfaces are in-bounds for V1 (keywords, specific feeds, specific accounts, thread depth)?
+- **Records + Retention:** What retention window is acceptable for local-first communication/audit records?
 
 ## 8. Recommended Next Outputs
 - Produce `planning.md` with 2-3 concrete architecture options and tradeoff matrix.
 - Define a strict "response contract" and policy table before coding.
 - Draft a minimal V1 boundary:
-  - Mention-only ingestion
-  - Human-in-the-loop approvals
+  - Mention + proactive thread engagement
+  - Autonomous replies by default
+  - Human-in-the-loop available via runtime toggle
+  - Local-first runtime with explicit on/off control
+  - Lightweight observability surface (web and/or CLI)
   - Daily memory compaction
   - Audit-first logging
+
+## 10. Decisions Captured (2026-02-23)
+- **Engagement Scope:** V1 includes proactive threat/thread engagement (not mention-only).
+- **Oversight Mode:** V1 starts with no human-in-the-loop requirement, but the architecture must support switching this on.
+- **Observability Requirement:** V1 must expose clear operational visibility; lightweight UI is acceptable and CLI observability should be supported.
+- **Comms Record:** All inbound/outbound communication events must be recorded (Letta baseline plus project-owned event/audit layer).
+- **Frontend Direction:** Build minimal but useful V1 frontend depth and keep feature gates/flags for expanded controls.
+- **Deployment:** Local-first now, with clean controls and migration path for near-term cloud deployment.
 
 ## 9. Source References
 - Bluesky Get Started: https://docs.bsky.app/docs/get-started
