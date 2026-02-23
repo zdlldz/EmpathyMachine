@@ -1,0 +1,17 @@
+Please create a lightweight starter repo for a modern, performant, and accessible app development pipeline which uses rust for backend, sqlite for local-first db ops, Svelte 5 with shadcn-svelte UI components for frontend, and Tauri for app creation/distribution (focus on Mac Silicon delivery for now, with Windows support in future). Lay the ideal groundwork for a highly-componentized and DRY approach for all aspects of the backend and frontend. Assume highly iterative ongoing future development. Build in rational QOL tooling and intrinsic CLI-capable testing for all aspects of the application (via playwright/etc). We also want great local development tooling, including hot reloading/compiling/etc so we can develop iteratively as quickly/easily as possible.
+
+The frontend should consist of a simple shade-svelte dashboard view (e.g. https://www.shadcn-svelte.com/examples/dashboard) with a simple tab-based settings view which opens as a standalone dialog window.
+
+Follow best practices throughout. Only use proven, mainstream, highly-regarded crates/libraries which are up-to-date and under active development.
+
+Build a standardized documentation process into all workflows and provide a stellar agents.md at project root, with equally stellar sub-agents files for each core directory (i.e. frontend and backend should likely have their own sub agents file).
+
+We want to emphasize extreme performance and native-feeling frontend.
+
+Create a simple ~"hello world" view in frontend which is generated via a simple editable setting input in settings view which will be processed via backend/db and displayed on frontend (to prove all backend <> frontend aspects are connected).
+
+This will be the "starter" for many small apps moving forward so we want to provide the best possible shortcut/shorthand repo which can be forked to create custom applications using these core aspects. This is an entirely blank folder so please implement appropriate git controls (i.e. gitignore/lfs) and any appropriate environment tooling as needed.
+
+I have initiated a blank git repo and checked out the `main` branch; you have permission to run as long as you'd like to accomplish our goals.
+
+Please don't hesitate to ask any/all questions/clarifications as needed. Any questions or clarifications before we begin? Thanks!
