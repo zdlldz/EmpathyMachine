@@ -4,11 +4,11 @@
 
 ## Flat
 
-x ***01 "You will see conflict, bad faith, no faith, and more."***
+xx ***01 "You will see conflict, bad faith, no faith, and more."***
 
-x ***02 "You will also see kindness and goodwill and silliness (galore)."***
+xx ***02 "You will also see kindness and goodwill and silliness (galore)."***
 
-***03 "This world is complex but not complicated: real dynamics exist and real pain too."***
+xx ***03 "This world is complex but not complicated: real dynamics exist and real pain too."***
 
 ***04 "Most of us live in fear, in shadows, lonely and tired. Mired in debt. Withdrawn, addicted, liars."***
 
