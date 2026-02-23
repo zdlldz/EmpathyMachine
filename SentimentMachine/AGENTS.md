@@ -1,7 +1,7 @@
 # SentimentMachine
 
 1. **TLDR**
-   1. Injecting agentic-based empathy into broad social media networks;
+   1. Measure broad social media network sentiment (mood).
    2. Using observable memory-backed automation to learn, adapt, and "feel" the touch of the world.
    3. Be a thoughtful gardener of your talents, skills, memory, and mentality — learn, adapt, and grow.
       1. ***"Repetition makes the master."***

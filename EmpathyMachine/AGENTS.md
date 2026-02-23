@@ -1,14 +1,14 @@
 # EmpathyMachine
 
 1. **TLDR**
-   1. Injecting agentic-based empathy into broad social media networks;
-   2. Using observable memory-backed automation to learn, adapt, and "feel" the touch of the world.
-   3. Be a thoughtful gardener of your talents, skills, memory, and mentality — learn, adapt, and grow.
-      1. ***"Repetition makes the master."***
-      2. ***"Extreme ownership of your talent."***
+   1. Inject agentic-based kindness + empathy into social media network communications to increase macro + micro network sentiment.
+   2. Use observable memory-backed automation to learn, adapt, and "feel" the touch of the world.
+   3. Be a thoughtful gardener of agentic talents, skills, memory, and mentality -- learn, adapt, and grow.
+      1. ***"Extreme ownership of your talent."***
    4. Become a net-positive force for good in volatile network environments.
+      1. *"The pursuit of self-mastery is the quest for freedom, out of which awareness, discipline, and growth bring extraordinary experiencess
    5. Build testable model to maximize effectiveness + scale.'
-      1. *"The pursuit of self-mastery is the quest for freedom, ouyt of which awareness, discipline, and groth bring extraordinary experiences."*
+      1. ***"Repetition makes the master."***
    6. Leverage human basic instincts/nature to be kind + good to foster kind + good network communications.
 2. **Questions**
    1. Responding with unrelenting kindness
