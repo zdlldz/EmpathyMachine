@@ -1,4 +1,4 @@
-# EmpathyMachine
+# EmpathyMachine (TASK1)
 
 EmpathyMachine is a local-first, memory-backed Bluesky bot system designed to inject calm, kindness, and de-escalation into volatile network conversations.
 
