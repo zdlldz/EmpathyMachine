@@ -15,7 +15,7 @@ description: Granular implementation checklist for local-first V1 scaffold and c
 # Phase 2: Implementation
 
 ## Current Focus
-Harden enterprise release quality: idempotency, retry/dead-letter behavior, smoke tests, accessibility polish, and documentation alignment.
+Prepare PR-readiness artifacts with reviewer checklist, test plan, and risk matrix.
 
 ## Checklist
 
